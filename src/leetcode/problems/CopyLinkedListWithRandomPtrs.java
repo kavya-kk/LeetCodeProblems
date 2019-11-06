@@ -8,7 +8,7 @@ public class CopyLinkedListWithRandomPtrs {
         LinkedListNode three = new LinkedListNode(3);
         LinkedListNode four = new LinkedListNode(4);
         two.next = three;
-        two.random = two;
+        two.random = null;
         three.next = four;
         three.random = two;
         four.random = three;
