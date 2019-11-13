@@ -17,7 +17,6 @@ public class BinarySearchTreeInsertion {
 
         insert(s,0);
 
-
     }
     private static TreeNode insert(TreeNode root, int val){
         if(root == null){
