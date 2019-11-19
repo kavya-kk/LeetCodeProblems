@@ -4,19 +4,20 @@ import java.util.*;
 
 //https://leetcode.com/problems/critical-connections-in-a-network/
 //https://www.youtube.com/watch?v=aZXi1unBdJA - TARJANs algorithm.
+//https://iq.opengenus.org/tarjans-algorithm/
 public class CriticalConnectionsInANetwork {
     static int[] ids ;
     static int[] lowLink;
     static boolean[] visited;
     static Map<Integer, List<Integer>> adjacencyMap = new HashMap<>();
     public static void main(String[] s){
-        Integer[][] conArr = {{1,2},{1,4},{2,3},{2,5},{4,5}};
+        Integer[][] conArr = {{4,3},{5,4},{3,5},{4,1},{2,1}};
         List<List<Integer>> connections = new LinkedList<>();
         for (Integer[] a:
              conArr) {
             connections.add(Arrays.asList(a));
             populateAdjacencyMap(a[0]-1,a[1]-1);
-            populateAdjacencyMap(a[1]-1,a[0]-1);
+           // populateAdjacencyMap(a[1]-1,a[0]-1);
         }
         int n = 5;
         for (List<Integer> bridge:
@@ -59,6 +60,9 @@ public class CriticalConnectionsInANetwork {
         ids[id] = id;
         lowLink[id] = id;
         // FROM the current node TO all its neighbours
+        if(adjacencyMap.get(id) == null){
+            return;
+        }
         for (int to: adjacencyMap.get(id)) {
             // if the node is not visited
             if(to==parent){
