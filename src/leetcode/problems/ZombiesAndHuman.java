@@ -52,7 +52,7 @@ public class ZombiesAndHuman {
                     q.offer(c);
                     int zomCode = zombie.row*R+zombie.col;
                     int newCode = newRow*R+newCol;
-                    hourMap.put(newCode,hourMap.get(zomCode)+1 );
+                    hourMap.put(newCode,hourMap.get(zomCode)+1);
                     hours = hourMap.get(newCode);
                 }
             }
