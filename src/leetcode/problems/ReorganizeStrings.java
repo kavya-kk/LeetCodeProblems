@@ -3,7 +3,8 @@ package leetcode.problems;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.PriorityQueue;
-
+//https://leetcode.com/problems/distant-barcodes/
+//https://leetcode.com/problems/reorganize-string
 public class ReorganizeStrings {
 
     public static void main(String[] s) {
