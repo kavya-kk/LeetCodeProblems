@@ -46,7 +46,7 @@ public class MinSwapsForPalindrome {
         s[i] = s[j];
         s[j] = iChar;
     }
-    
+
     private static boolean isPalPossible(String s){
         int uniq = 0;
         HashSet<Character> set = new HashSet<>();
