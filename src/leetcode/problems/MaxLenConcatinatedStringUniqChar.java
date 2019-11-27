@@ -6,7 +6,7 @@ public class MaxLenConcatinatedStringUniqChar {
     private static  Map<Integer, List<Integer>> adjMap = new HashMap<>();
     private static boolean[] visited;
     public static void main(String[] s){
-        String[] arr = {"s","sa","m","e","mu","ei"};
+        String[] arr = {"abc","ade","akl"};
         System.out.println(maxLength(Arrays.asList(arr)));
     }
 
@@ -15,6 +15,9 @@ public class MaxLenConcatinatedStringUniqChar {
         populateAdjacency(arr);
         for(Integer i: adjMap.keySet()){
             int len = dfs(i,-1,arr, arr.get(i));
+            if(len == arr.get(i).length()){
+                len = 0;
+            }
             maxLen = Math.max(len,maxLen);
         }
         return maxLen;
