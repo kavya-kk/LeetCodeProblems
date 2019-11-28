@@ -7,7 +7,7 @@ import java.util.Queue;
 //https://leetcode.com/discuss/interview-question/356150
 public class TreasureIslandMultiSourceShortestPath {
     public static void main(String[] s){
-        char[][] mat = {{'O', 'O', 'O', 'O', 'D'},
+        char[][] mat = {{'S', 'O', 'O', 'S', 'S'},
                         {'D', 'O', 'D', 'O', 'D'},
                         {'O', 'O', 'O', 'O', 'D'},
                         {'X', 'D', 'D', 'O', 'O'},

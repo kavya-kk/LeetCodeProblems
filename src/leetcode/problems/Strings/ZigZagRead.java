@@ -1,9 +1,10 @@
-package leetcode.problems.Array;
+package leetcode.problems.Strings;
 
+//https://leetcode.com/problems/zigzag-conversion/
 public class ZigZagRead {
     public static void main(String[] str){
         Answer sl = new Answer();
-        System.out.println(sl.convert("paypalishiring",3));
+        System.out.println(sl.convert("paypalishiring",4));
     }
 }
 class Answer {
@@ -14,8 +15,6 @@ class Answer {
         }
         String arr[] = new String[numRows];
         int i=0;
-        int row = 0;
-        boolean fillRow = true;
         while(i<strlen){
             for(int a =0 ;a<numRows && i<strlen; a++,i++){
                 if(arr[a]==null){

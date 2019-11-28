@@ -36,16 +36,13 @@ public class TripletsOfSum {
                             t.add(a[i]);
                             t.add(a[j]);
                             t.add(a[k]);
-                            strList.add(a[i]+"'"+a[j]+"'"+a[k]);
+                            strList.add(s);
                             res.add(t);
                         }
                     }
                     k++;
                 }
             }
-        }
-        for(String str: strList){
-            System.out.print(str+",");
         }
         return res;
     }

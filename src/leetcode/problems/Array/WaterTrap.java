@@ -2,6 +2,7 @@ package leetcode.problems.Array;
 
 import java.util.Stack;
 
+//https://leetcode.com/problems/trapping-rain-water/
 public class WaterTrap {
 
     public static void main(String[] ge) {
