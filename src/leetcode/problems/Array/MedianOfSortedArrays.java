@@ -1,5 +1,6 @@
 package leetcode.problems.Array;
 
+// https://www.youtube.com/watch?v=LPFhl65R7ww
 public class MedianOfSortedArrays {
     public static void main(String[] str){
         int nums1[] = {1,2};

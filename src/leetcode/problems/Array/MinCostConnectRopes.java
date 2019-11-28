@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.PriorityQueue;
 
 //https://leetcode.com/discuss/interview-question/344677
-public class ConnectRopesMinimalCost {
+public class MinCostConnectRopes {
     public static void main(String[] s){
         Integer[] arr = {2,2,3,3};
         System.out.println(optimalCostConnectRopes(arr));
