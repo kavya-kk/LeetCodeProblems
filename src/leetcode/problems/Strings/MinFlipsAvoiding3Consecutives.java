@@ -1,9 +1,9 @@
 package leetcode.problems.Strings;
 
 //https://leetcode.com/discuss/interview-question/398026/
-public class MinSwapsAvoiding3Consecutives {
+public class MinFlipsAvoiding3Consecutives {
     public static void main(String[] po){
-        String s = "baaaaaaaaaab";
+        String s = "baaabaababbabbbba";
         System.out.println(minSwaps(s));
     }
     private static int minSwaps(String s){

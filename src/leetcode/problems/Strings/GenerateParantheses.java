@@ -1,8 +1,8 @@
-package leetcode.problems.General;
+package leetcode.problems.Strings;
 
 import java.util.ArrayList;
 import java.util.List;
-
+//https://leetcode.com/problems/generate-parentheses/
 public class GenerateParantheses {
     public static void main(String[] s){
         Solution sol = new Solution();

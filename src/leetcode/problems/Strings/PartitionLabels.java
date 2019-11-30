@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
-
+//https://leetcode.com/problems/partition-labels/
 public class PartitionLabels {
     public static void main(String[] qwe){
         String s = "abbcbcdefegdhijhklij";
@@ -35,16 +35,6 @@ public class PartitionLabels {
             }
         }
         return partitionLabels;
-    }
-    static class CharacterProp {
-        int start;
-        int end;
-        int count;
-        CharacterProp(int start, int end, int count){
-            this.start = start;
-            this.end = end;
-            this.count = count;
-        }
     }
 }
 

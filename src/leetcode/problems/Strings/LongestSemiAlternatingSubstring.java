@@ -1,5 +1,6 @@
 package leetcode.problems.Strings;
 
+//https://leetcode.com/discuss/interview-question/398037/
 public class LongestSemiAlternatingSubstring {
     public static void main(String[] s){
         String input = "bbaabbaa";
