@@ -22,6 +22,7 @@ public class IsSubString {
                 if(string.charAt(i) == sub.charAt(j)){
                     continue;
                 }else {
+                    j=0;
                     i++;
                 }
             }

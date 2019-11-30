@@ -17,6 +17,7 @@ public class WaterTrap {
         }
         Stack<Integer> stk = new Stack<>();
         for(int i =0;i<h.length; i++){
+            // while stack has something && if capacity computation is possible.
             while(!stk.isEmpty() && h[stk.peek()] < h[i]){
                 int ele = stk.pop();
                 if(!stk.isEmpty()){
