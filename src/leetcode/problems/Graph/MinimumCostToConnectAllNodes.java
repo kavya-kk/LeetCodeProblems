@@ -1,6 +1,5 @@
 package leetcode.problems.Graph;
 
-import java.util.Comparator;
 import java.util.HashSet;
 import java.util.PriorityQueue;
 import java.util.Set;
@@ -33,6 +32,7 @@ public class MinimumCostToConnectAllNodes {
         Set<Integer> leftOverNodes = new HashSet<>();
         for (int i = 1;i<=n;i++) {
             if(!nodes[i-1]){
+                // will create a new component for the current node and add it to the list of components.
                 findComp(i,comps);
                 leftOverNodes.add(i);
             }
@@ -71,17 +71,7 @@ public class MinimumCostToConnectAllNodes {
     }
 
     private static PriorityQueue<int[]> getPrioritizedNewEdges(int[][] newEdges){
-        PriorityQueue<int[]> q = new PriorityQueue<>(new Comparator<int[]>() {
-            @Override
-            public int compare(int[] o1, int[] o2) {
-                if(o1[2] < o2[2]){
-                    return -1;
-                }else if (o1[2] > o2[2]){
-                    return 1;
-                }
-                return 0;
-            }
-        });
+        PriorityQueue<int[]> q = new PriorityQueue<>( (o1,o2)-> o1[2]-o2[2]);
         for (int[] edge:
             newEdges ) {
             q.offer(edge);

@@ -40,7 +40,6 @@ public class CriticalConnectionsInANetwork {
         lowLink = new int[n];
         ids = new int[n];
         visited = new boolean[n];
-        Arrays.fill(visited, false);
     }
 
     public static List<List<Integer>> criticalConnections(int n, List<List<Integer>> connections) {

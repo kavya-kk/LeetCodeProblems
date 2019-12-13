@@ -23,11 +23,8 @@ public class MostCommonWord {
             if(clean.equals("")){
                 continue;
             }
-            int count = 1;
-            if(wordCount.containsKey(clean)){
-                count = wordCount.get(clean)+1;
-            }
-            wordCount.put(clean,count);
+            wordCount.put(clean,wordCount.getOrDefault(clean,0)+1);
+            int count = wordCount.get(clean);
             if(maxCount<count && !bannedL.contains(clean)){
                 maxCount = count;
                 word = clean;

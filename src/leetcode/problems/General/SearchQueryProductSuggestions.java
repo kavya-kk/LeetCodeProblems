@@ -9,10 +9,9 @@ public class SearchQueryProductSuggestions {
 
     public static void main(String[] iou){
         int numProducts = 5;
-        String[] repo = {"mouse","mousepad","monitor","moneypot","mobile"};
+        String[] repo = {"mouse","mousepad","monitor","moneypot","mobile","monday"};
         String query = "mon";
-        for (List<String> list:
-             getQueryResult(numProducts,repo,query)) {
+        for (List<String> list: getQueryResult(numProducts,repo,query)) {
             System.out.println();
             for (String s:
                  list) {

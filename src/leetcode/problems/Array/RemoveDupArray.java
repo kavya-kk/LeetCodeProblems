@@ -2,7 +2,7 @@ package leetcode.problems.Array;
 
 public class RemoveDupArray {
     public static void main(String[] str){
-        int[] arr = {0,1,2,3,4,5};
+        int[] arr = {0,0,0};
         System.out.println(removeDuplicates(arr));
     }
     private static int removeDuplicates(int[] ar){
@@ -24,4 +24,5 @@ public class RemoveDupArray {
         }
         return i+1;
     }
+
 }

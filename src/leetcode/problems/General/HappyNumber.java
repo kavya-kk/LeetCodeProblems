@@ -12,7 +12,7 @@ public class HappyNumber {
             int square = 0;
             System.out.println(n);
             while(n>0){
-                square = square + (n%10)*(n%10);
+                square += (n%10)*(n%10);
                 n/=10;
             }
             //System.out.println(square);

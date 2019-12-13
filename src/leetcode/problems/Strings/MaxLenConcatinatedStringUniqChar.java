@@ -1,5 +1,6 @@
 package leetcode.problems.Strings;
 //https://leetcode.com/discuss/interview-question/401826/
+//https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters/
 import java.util.*;
 
 public class MaxLenConcatinatedStringUniqChar {
@@ -61,7 +62,6 @@ public class MaxLenConcatinatedStringUniqChar {
                         adjMap.put(j,newList);
                     }
                     adjMap.get(j).add(i);
-
                 }
             }
         }

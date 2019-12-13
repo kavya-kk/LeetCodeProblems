@@ -14,13 +14,10 @@ public class TopKFrequent {
     }
     public static List<Integer>  topKFrequent(int[] nums, int k) {
         Map<Integer,Integer> map = new HashMap<>();
+        // gather a number's frequency
         for (int number:
              nums) {
-            if(map.containsKey(number)){
-                map.put(number,map.get(number)+1);
-            }else {
-                map.put(number,1);
-            }
+            map.put(number, map.getOrDefault(number,0)+1);
         }
         PriorityQueue<Map.Entry<Integer,Integer>>  queue= new PriorityQueue<>((a,b)-> (b.getValue()-a.getValue()));
 

@@ -3,8 +3,9 @@ package leetcode.problems.Array;
 //https://leetcode.com/discuss/interview-question/383669/
 public class MaxOfMinAltitudesMatrix {
     public static void main(String[] s){
-        int[][] a = {{1,2,4},
-                     {3,5,1}};
+        int[][] a = {{5,4,5},
+                     {1,2,6},
+                     {7,4,6}};
         System.out.println(sol(a));
     }
     private static int sol (int[][] a){

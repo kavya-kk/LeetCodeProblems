@@ -1,6 +1,5 @@
 package leetcode.problems.Strings;
 
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.PriorityQueue;
 
@@ -20,19 +19,8 @@ public class ReorganizeStrings {
             charCount.put(input.charAt(i), charCount.getOrDefault(input.charAt(i), 0) + 1);
         }
 
-        PriorityQueue<LetterCount> letters = new PriorityQueue<>(new Comparator<LetterCount>() {
-            @Override
-            public int compare(LetterCount o1, LetterCount o2) {
-                if (o1.count < o2.count) {
-                    return 1;
-                } else if (o1.count > o2.count) {
-                    return -1;
-                }
-                return 0;
-            }
-        });
-        for (char c :
-                charCount.keySet()) {
+        PriorityQueue<LetterCount> letters = new PriorityQueue<>((o1,o2)-> o2.count-o1.count);
+        for (char c : charCount.keySet()) {
             letters.offer(new LetterCount(c, charCount.get(c)));
         }
 
