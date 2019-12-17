@@ -1,4 +1,4 @@
-package leetcode.problems.Array;
+package leetcode.problems.Graph;
 
 //https://leetcode.com/problems/surrounded-regions/
 public class SurroundedRegions {

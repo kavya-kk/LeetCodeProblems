@@ -33,7 +33,6 @@ public class PrisonCells {
 
         }
         List<Integer> list = N%combi.size() == 0 ? combi.get(combi.size()-1): combi.get(N%combi.size()-1);
-
         return list.stream().mapToInt(i->i).toArray();
     }
 }

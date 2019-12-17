@@ -1,4 +1,4 @@
-package leetcode.problems.Array;
+package leetcode.problems.DynamicProgramming;
 //https://leetcode.com/problems/partition-equal-subset-sum/
 public class PartitionEqualSumSubset {
     public static void main(String[] str){

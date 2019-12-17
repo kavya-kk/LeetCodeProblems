@@ -1,4 +1,4 @@
-package leetcode.problems.Array;
+package leetcode.problems.Backtracking;
 //https://leetcode.com/problems/partition-to-k-equal-sum-subsets/
 public class KEqualSumSubsets {
     public static void main(String[] s){

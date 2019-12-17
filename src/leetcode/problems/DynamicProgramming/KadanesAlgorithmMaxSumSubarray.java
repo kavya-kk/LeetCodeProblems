@@ -1,4 +1,4 @@
-package leetcode.problems.Array;
+package leetcode.problems.DynamicProgramming;
 
 public class KadanesAlgorithmMaxSumSubarray {
 
@@ -7,7 +7,7 @@ public class KadanesAlgorithmMaxSumSubarray {
 
         System.out.println(maxSum(a));
     }
-
+    // works only when there is atleast one +ve integer in the array.
     private static int maxSum(int[] a){
         int maxSum = Integer.MIN_VALUE;
         int sumSoFar = 0;
@@ -21,5 +21,20 @@ public class KadanesAlgorithmMaxSumSubarray {
             maxSum = Math.max(maxSum,sumSoFar);
         }
         return maxSum;
+    }
+
+    private static int maxSumEvenWithAllNegInts(int[] a){
+        if(a.length ==0){
+            return Integer.MIN_VALUE;
+        }
+
+        int max = a[0];
+        for(int i =1;i<a.length;i++){
+            if(a[i-1]>0){
+                a[i]+=a[i-1];
+            }
+            max = Math.max(a[i],max);
+        }
+        return max;
     }
 }

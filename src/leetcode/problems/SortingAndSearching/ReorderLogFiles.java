@@ -1,4 +1,4 @@
-package leetcode.problems.General;
+package leetcode.problems.SortingAndSearching;
 
 import java.util.Arrays;
 //https://leetcode.com/problems/reorder-data-in-log-files/

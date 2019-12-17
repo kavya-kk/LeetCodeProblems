@@ -1,4 +1,4 @@
-package leetcode.problems.Array;
+package leetcode.problems.SortingAndSearching;
 
 import java.util.PriorityQueue;
 

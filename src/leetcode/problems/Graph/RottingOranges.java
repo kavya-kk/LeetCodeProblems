@@ -1,4 +1,4 @@
-package leetcode.problems.Array;
+package leetcode.problems.Graph;
 
 import java.util.*;
 //https://leetcode.com/problems/rotting-oranges/

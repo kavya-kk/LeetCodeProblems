@@ -1,4 +1,4 @@
-package leetcode.problems.Array;
+package leetcode.problems.SortingAndSearching;
 
 //https://leetcode.com/problems/spiral-matrix-ii/
 public class SpiralMatrixII {

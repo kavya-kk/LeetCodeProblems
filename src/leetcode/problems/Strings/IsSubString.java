@@ -3,8 +3,8 @@ package leetcode.problems.Strings;
 //https://www.youtube.com/watch?v=GTJr8OvyEVQ
 public class IsSubString {
     public static void main(String[] swr){
-        String string = "abxabcabcab";
-        String s = "abcab";
+        String string = "bbababaaaababbaabbbabbbaaabbbaaababbabaabbaaaaabbaaabbbbaaabaabbaababbbaabaaababbaaabbbbbbaabbbbbaaabbababaaaaabaabbbababbaababaabbaa";
+        String s = "bbabba";
         System.out.println(isSubString(string, s));
     }
 
@@ -16,13 +16,12 @@ public class IsSubString {
                 i++;
                 j++;
             }else {
-                if(j-1>0) {
-                    j = arr[j - 1];
+                while(string.charAt(i) != sub.charAt(j) && j!=0){
+                    j = arr[j-1];
                 }
                 if(string.charAt(i) == sub.charAt(j)){
                     continue;
                 }else {
-                    j=0;
                     i++;
                 }
             }
@@ -42,7 +41,7 @@ public class IsSubString {
                 arr[i] = j+1;
                 j++;
             }else {
-                arr[i] = 0;
+                arr[i] = arr[i-1];
             }
             i++;
         }

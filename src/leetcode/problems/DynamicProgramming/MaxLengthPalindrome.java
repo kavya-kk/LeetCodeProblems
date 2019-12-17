@@ -1,4 +1,4 @@
-package leetcode.problems.Strings;
+package leetcode.problems.DynamicProgramming;
 
 //https://leetcode.com/problems/longest-palindromic-substring/
 public class MaxLengthPalindrome     {

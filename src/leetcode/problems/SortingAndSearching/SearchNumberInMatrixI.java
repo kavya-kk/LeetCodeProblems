@@ -1,4 +1,4 @@
-package leetcode.problems.Array;
+package leetcode.problems.SortingAndSearching;
 //https://leetcode.com/problems/search-a-2d-matrix/
 public class SearchNumberInMatrixI {
     public static void main(String[] s){
