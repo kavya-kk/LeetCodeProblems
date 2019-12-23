@@ -1,4 +1,4 @@
-package leetcode.problems.Array;
+package leetcode.problems.Graph;
 
 //https://www.pramp.com/challenge/N5LYMbYzyOtbpovQoY7X
 class NumberOfPaths {

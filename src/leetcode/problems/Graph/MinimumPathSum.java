@@ -1,4 +1,4 @@
-package leetcode.problems.Array;
+package leetcode.problems.Graph;
 
 //https://leetcode.com/problems/minimum-path-sum/
 public class MinimumPathSum {

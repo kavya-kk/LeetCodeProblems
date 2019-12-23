@@ -1,4 +1,4 @@
-package leetcode.problems.Array;
+package leetcode.problems.SortingAndSearching;
 // with repetitions
 public class FindMinInSortedRotatedArray {
     public static void main(String[] s){

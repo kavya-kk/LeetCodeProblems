@@ -1,4 +1,4 @@
-package leetcode.problems.Array;
+package leetcode.problems.Graph;
 
 //https://leetcode.com/discuss/interview-question/383669/
 public class MaxOfMinAltitudesMatrix {

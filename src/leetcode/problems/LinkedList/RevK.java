@@ -25,40 +25,66 @@ public class RevK {
         }
     }
 
-    private static ListNode reverseKGroup(ListNode head, int k){
-
-        if(k==1 || head == null || head.next == null){
+    public static ListNode reverseKGroup(ListNode head, int k) {
+        if(k <=1){
             return head;
         }
 
-        ListNode temp = head;
-        int cnt = 0;
-        while(cnt <=k) {
-            temp = temp.next;
-            cnt++;
-            if(temp == null){
-                break;
+        ListNode result = null;
+        ListNode cur = head;
+        ListNode prev = null;
+        while(cur!=null){
+            //start - beginning of the group of k nodes that are to be reversed;
+            // end - marks the end of the group of k nodes that are to be reversed;
+            ListNode start = cur, end = null;
+            //to maintain the current count in the group.
+            int kIdx = 0;
+            // gather the group of k nodes;
+            while(kIdx<k && cur!=null){
+                end = cur;
+                cur = cur.next;
+                kIdx++;
             }
+            // if there are k nodes available to be reversed;
+            if(kIdx == k){
+                // the reverse helper function returns head of the reversed section;
+                ListNode reversedHead = reverse(start,end);
+                // if the final result list's head is not defined assign the reversed head to it, and keep track of the last node to attach the next reversed group's head.
+                if(result == null){
+                    result = reversedHead;
+                    prev = start;
+                }
+                // if the result head is already defined, attach the currently reversed group's head to the previously reversed group's last node.
+                else {
+                    prev.next = reversedHead;
+                    prev = start;
+                }
+            }
+            // if there are no k nodes in the group then attach them as it is (without reversing)
+            else {
+                if(prev !=null)
+                    prev.next = start;
+            }
+
         }
-        if(cnt<k){
-            return head;
-        }
-        ListNode prev = head;
-        ListNode cur = prev.next;
+        return result == null? head: result;
+    }
+
+    // a helper function to reverse the nodes from start to end;
+    private static ListNode reverse(ListNode start, ListNode end){
+        ListNode prev = start;
+        ListNode cur = start.next;
         ListNode next = cur.next;
-        int ki=1;
-        while (ki<k){
+        while(cur!=end){
             cur.next = prev;
-            ki++;
 
             prev = cur;
-            cur= next;
-            if(cur == null){
-                break;
-            }
-            next = next.next;
+            cur = next;
+            next =next.next;
         }
-        head.next = reverseKGroup(cur, k);
-        return prev;
+
+        cur.next = prev;
+        start.next = null;
+        return cur;
     }
 }

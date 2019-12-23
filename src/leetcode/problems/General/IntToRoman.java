@@ -7,67 +7,76 @@ import java.util.Map;
 
 public class IntToRoman {
 
-    static Map<Integer, String> rom = new HashMap<Integer, String>();
+    static Map<Integer, String> map = new HashMap<Integer, String>();
     public static void main(String[] str){
-        populateRom();
         System.out.println(intToRoman(3985));
     }
 
-    private static void populateRom(){
-        rom.put(1,"I");
-        rom.put(5,"V");
-        rom.put(10,"X");
-        rom.put(50,"L");
-        rom.put(100,"C");
-        rom.put(500,"D");
-        rom.put(1000,"M");
-    }
-    private static String intToRoman(int num) {
-        String roman = "";
-        List<Integer> arr = getBaseNums(num);
-        int mul =1;
-        for(int i : arr){
-            if(i==0){
-                mul*=10;
-                continue;
-            }
-            int n = i/mul;
-            switch(n){
-                case 1: case 2: case 3:
-                    for(int j=0;j<n;j++){
-                        roman = rom.get(mul)+ roman;
-                    }
-                    break;
-                case 4: case 5:
-                    roman = rom.get(mul*5)+ roman;
-                    for(int j=n;j<5;j++){
-                        roman = rom.get(mul)+roman;
-                    }
-                    break;
-                case 6: case 7: case 8:
-                    for(int j=0;j<n-5;j++){
-                        roman = rom.get(mul)+roman;
-                    }
-                    roman = rom.get(mul*5)+ roman;
-                    break;
-                case 9:
-                    roman = rom.get(mul)+ rom.get(mul*10)+ roman;
-                    break;
-            }
-            mul*=10;
+    public static String intToRoman(int num) {
+        String result = "";
+        init();
+        if(num ==0){
+            return result;
         }
-        return roman;
-    }
-    private static List<Integer> getBaseNums(int num){
-        List<Integer> list = new ArrayList<Integer>();
-        int mul = 1;
-        while (num>0){
-            list.add((num%10)*mul);
-            mul = mul*10;
-            num = num/10;
+        //for num 1994, the nums list will contain [1000,900,90,4];
+        List<Integer> nums = new ArrayList<>();
+        int position = 1;
+        while(num>0){
+            nums.add(0,(num%10) * position);
+            position*=10;
+            num/=10;
         }
-        System.out.println(list);
-        return list;
+
+        // each item will be converted to the corresponding roman letters and appended to the result;
+        position/=10;
+        for(int n : nums){
+            result+= helper(n,position);
+            position/=10;
+        }
+
+        return result;
+    }
+
+    public static String helper(int n, int position){
+        int sigDigit = n/position;
+        String res = "";
+        switch(sigDigit){
+            case 1:
+            case 5:
+                return map.get(n);
+            case 6:
+            case 7:
+            case 8:
+                res = map.get(5*position);
+                System.out.println(res);
+                for(;sigDigit>5;sigDigit--){
+                    res+=map.get(position);
+                }
+                return res;
+            case 2:
+            case 3:
+                for(;sigDigit>0;sigDigit--){
+                    res+=map.get(position);
+                }
+                return res;
+            case 4:
+            case 9:
+                res = sigDigit == 4 ? map.get(5*position) : map.get(10*position);
+                res = map.get(position)+res;
+                return res;
+            default:
+                return res;
+        }
+    }
+
+    public static void init(){
+        map.put(1,"I");
+        map.put(5,"V");
+        map.put(10,"X");
+        map.put(50,"L");
+        map.put(100,"C");
+        map.put(500,"D");
+        map.put(1000,"M");
     }
 }
 
