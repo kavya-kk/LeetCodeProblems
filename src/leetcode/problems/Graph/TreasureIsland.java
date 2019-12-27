@@ -6,8 +6,8 @@ import java.util.*;
 public class TreasureIsland {
     public static void main(String[] s){
         char[][] mat = {{'O', 'D', 'O', 'O'},
-                {'X', 'D', 'D', 'O'},
-                {'O', 'D', 'O', 'O'},
+                {'O', 'D', 'D', 'O'},
+                {'X', 'D', 'O', 'O'},
                 {'O', 'D', 'D', 'O'}};
         System.out.println(findTreasure(mat));
     }

@@ -3,7 +3,7 @@ package leetcode.problems.Tree;
 import java.util.*;
 
 //https://leetcode.com/problems/cut-off-trees-for-golf-event/
-public class CutOffTreesForGolfEvent {
+public class  CutOffTreesForGolfEvent {
 
     static int R = 0;
     static int C = 0;

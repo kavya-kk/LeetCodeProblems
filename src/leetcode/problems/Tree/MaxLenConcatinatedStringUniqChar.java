@@ -1,11 +1,10 @@
-package leetcode.problems.Strings;
+package leetcode.problems.Tree;
 //https://leetcode.com/discuss/interview-question/401826/
 //https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters/
 import java.util.*;
 
 public class MaxLenConcatinatedStringUniqChar {
     private static  Map<Integer, List<Integer>> adjMap = new HashMap<>();
-    private static boolean[] visited;
     public static void main(String[] s){
         String[] arr = {"abc","ade","akl"};
         System.out.println(maxLength(Arrays.asList(arr)));

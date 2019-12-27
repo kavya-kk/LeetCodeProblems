@@ -14,6 +14,8 @@ public class KClosestPointsToOrigin {
     }
 
     public static int[][] kClosest(int[][] points, int K) {
+
+        //store points in the descending order of distance.
         PriorityQueue<Point> q = new PriorityQueue<>(K, new Comparator<Point>() {
             @Override
             public int compare(Point o1, Point o2) {

@@ -16,7 +16,6 @@ public class WordLadder {
             return 0;
         }
         populateAdjacency(wordList);
-        System.out.println( wordList);
         int minSteps =Integer.MAX_VALUE;
         for(int i =0;i<wordList.size();i++){
 
@@ -50,7 +49,6 @@ public class WordLadder {
                 }
 
                 List<Integer> neighbors = graph.get(polled);
-                System.out.println("Neighbors of"+ wordList.get(polled)+" "+neighbors);
                 // if polled has no neighbors;
                 if(neighbors == null || neighbors.isEmpty()){
                     continue;

@@ -38,9 +38,7 @@ class Solution {
                     nI = prefixArr[nI-1];
                 }
                 if(haystack.charAt(hI) == needle.charAt(nI)){
-
                     startIdx = hI-nI;
-
                     continue;
                 }else {
                     startIdx=-1;

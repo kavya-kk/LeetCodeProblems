@@ -2,8 +2,7 @@ package leetcode.problems.LinkedList;
 
 import nodes.ListNode;
 
-public class LinkedListCycle {
-
+public class LinkedListCycleStart {
 
     public static void main(String[] s){
         ListNode l1 = new ListNode(1);
@@ -18,21 +17,32 @@ public class LinkedListCycle {
         System.out.println(detectCycle(l1));
 
     }
-    private static boolean detectCycle(ListNode head) {
-        if(head == null || head.next == null){
-            return false;
+
+    public static ListNode detectCycle(ListNode head) {
+        if(head ==null){
+            return null;
         }
+        ListNode fast = head;
         ListNode slow = head;
-        ListNode fast = head.next.next;
-        while (fast !=null &&  fast.next!= null && slow != fast){
+
+        //detect cycle.
+        do{
             slow = slow.next;
+            if(fast.next==null)
+                break;
             fast = fast.next.next;
+        }while(fast!=null && fast != slow);
+
+        if(fast == null || fast.next==null){
+            return null;
         }
-        if(slow == fast){
-            return true;
+
+        ListNode ptr = head;
+        while(ptr!=slow){
+            ptr= ptr.next;
+            slow = slow.next;
         }
-        return false;
+
+        return slow;
     }
-
-
 }

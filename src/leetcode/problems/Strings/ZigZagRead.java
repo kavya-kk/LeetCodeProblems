@@ -3,12 +3,10 @@ package leetcode.problems.Strings;
 //https://leetcode.com/problems/zigzag-conversion/
 public class ZigZagRead {
     public static void main(String[] str){
-        Answer sl = new Answer();
-        System.out.println(sl.convert("paypalishiring",4));
+        System.out.println(convert("paypalishiring",4));
     }
-}
-class Answer {
-    public String convert(String s, int numRows) {
+
+    public static String convert(String s, int numRows) {
         int strlen = s.length();
         if(strlen <= numRows || numRows ==1){
             return s;

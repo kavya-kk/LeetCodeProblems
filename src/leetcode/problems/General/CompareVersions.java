@@ -17,7 +17,6 @@ public class CompareVersions {
         //equalize them in length so that comparison is easier
         equalize(v1,v2);
 
-        System.out.println(v1+" "+v2);
         int size = v1.size();
         int i =0;
         while(i < size){

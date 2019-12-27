@@ -48,7 +48,6 @@ public class IntToRoman {
             case 7:
             case 8:
                 res = map.get(5*position);
-                System.out.println(res);
                 for(;sigDigit>5;sigDigit--){
                     res+=map.get(position);
                 }
