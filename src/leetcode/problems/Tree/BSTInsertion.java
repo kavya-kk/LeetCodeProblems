@@ -2,7 +2,7 @@ package leetcode.problems.Tree;
 
 import nodes.TreeNode;
 
-public class BinarySearchTreeInsertion {
+public class BSTInsertion {
     public static void main(String[] st){
         TreeNode s = new TreeNode(7);
         TreeNode four = new TreeNode(4);

@@ -1,5 +1,6 @@
 package leetcode.problems.Array;
 
+//https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 public class RemoveDupArray {
     public static void main(String[] str){
         int[] arr = {0,0,0};

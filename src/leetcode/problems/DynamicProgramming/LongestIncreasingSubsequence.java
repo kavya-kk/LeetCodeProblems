@@ -1,4 +1,4 @@
-package leetcode.problems.Array;
+package leetcode.problems.DynamicProgramming;
 
 import java.util.Arrays;
 //https://leetcode.com/problems/longest-increasing-subsequence/

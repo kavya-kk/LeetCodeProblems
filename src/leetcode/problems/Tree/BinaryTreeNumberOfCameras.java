@@ -1,7 +1,7 @@
 package leetcode.problems.Tree;
 
 import nodes.TreeNode;
-
+//https://leetcode.com/problems/binary-tree-cameras
 public class BinaryTreeNumberOfCameras {
 
     public static void main(String[] str){
@@ -30,6 +30,9 @@ public class BinaryTreeNumberOfCameras {
         return (dfs(root)<1 ? 1:0) + noOfCameras ;
     }
 
+    //Return 0 if it's a leaf.
+    //Return 1 if it's a parent of a leaf, with a camera on this node.
+    //Return 2 if it's coverd, without a camera on this node.
     public static int dfs(TreeNode root) {
         if(root == null){
             // denotes there are no cameras to be placed
